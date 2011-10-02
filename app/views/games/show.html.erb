@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>id:</b>
+  <%= @game._id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @game.date %>
+</p>
+
+<p>
+  <b>Season:</b>
+  <%= @game.season %>
+</p>
+
+<p>
+  <b>Opponent:</b>
+  <%= @game.opponent %>
+</p>
+
+<p>
+  <b>Nuscore:</b>
+  <%= @game.nuscore %>
+</p>
+
+<p>
+  <b>Oppscore:</b>
+  <%= @game.oppscore %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @game.location %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @game.deleted %>
+</p>
+
+<p>
+  <b>Created:</b>
+  <%= @game.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

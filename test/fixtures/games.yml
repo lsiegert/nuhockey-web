@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  _id: 1
+  date: 2011-10-01
+  season: MyString
+  opponent: MyString
+  nuscore: 1
+  oppscore: 1
+  location: MyString
+  deleted: false
+
+two:
+  _id: 1
+  date: 2011-10-01
+  season: MyString
+  opponent: MyString
+  nuscore: 1
+  oppscore: 1
+  location: MyString
+  deleted: false
