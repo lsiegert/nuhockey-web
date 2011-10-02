@@ -8,7 +8,7 @@
 require 'csv-mapper'
 include CsvMapper
 
-results = CsvMapper.import('/Users/lauren/Code/R/nuhockey/games.csv') do
+results = CsvMapper.import(Rails.root.join('games.csv')) do
   map_to Game
   after_row lambda{|row, game| game.save}
   start_at_row 1
