@@ -1,0 +1,17 @@
+<%
+@newgames.each do |game|
+%>
+NEW,<%= game._id %>,<%= game.date %>,<%= game.season %>,<%= game.opponent %>,<%= game.nuscore %>,<%= game.oppscore %>,<%= game.location%>
+<% end %>
+
+<%
+@updatedgames.each do |game|
+%>
+UPDATED,<%= game._id %>,<%= game.date %>,<%= game.season %>,<%= game.opponent %>,<%= game.nuscore %>,<%= game.oppscore %>,<%= game.location%>
+<% end %>
+
+<%
+@deletedgames.each do |game|
+%>
+DELETED,<%= game._id %>
+<% end %>
