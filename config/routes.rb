@@ -5,7 +5,7 @@ Nuhockey::Application.routes.draw do
 
   resources :seasons
   
-  match 'updates/:time' => 'updates#since'
+  match 'gameupdates/:time' => 'updates#since'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

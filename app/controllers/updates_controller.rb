@@ -1,6 +1,6 @@
 class UpdatesController < ApplicationController
 
-  # GET /updates/20111008232210  Time in UTC 24 hour format
+  # GET /gameupdates/20111008232210  Time in UTC 24 hour format
   def since
     input = params[:time]
     
