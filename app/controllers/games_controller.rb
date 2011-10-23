@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  http_basic_authenticate_with :name => "lauren", :password => "dongara"
+  
   # GET /games
   # GET /games.xml
   def index
