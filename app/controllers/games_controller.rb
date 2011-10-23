@@ -1,5 +1,12 @@
 class GamesController < ApplicationController
-  http_basic_authenticate_with :name => "lauren", :password => "dongara"
+  before_filter :authenticate
+  
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      md5_of_password = Digest::MD5.hexdigest(password)
+           username == 'lauren' && md5_of_password == '35810cc5e71d7207536adb708dc79c33'
+    end
+  end
   
   # GET /games
   # GET /games.xml
