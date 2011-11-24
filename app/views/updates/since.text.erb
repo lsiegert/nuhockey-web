@@ -1,13 +1,13 @@
 <%
 @newgames.each do |game|
 %>
-NEW,<%= game._id %>,<%= game.date %>,<%= game.season %>,<%= game.opponent %>,<%= game.nuscore %>,<%= game.oppscore %>,<%= game.location%>
+NEW,<%= game._id %>,<%= game.date %>,<%= game.season %>,<%= game.opponent %>,<%= game.nuscore %>,<%= game.oppscore %>,<%= game.location %>,<%= game.overtime %>
 <% end %>
 
 <%
 @updatedgames.each do |game|
 %>
-UPDATED,<%= game._id %>,<%= game.date %>,<%= game.season %>,<%= game.opponent %>,<%= game.nuscore %>,<%= game.oppscore %>,<%= game.location%>
+UPDATED,<%= game._id %>,<%= game.date %>,<%= game.season %>,<%= game.opponent %>,<%= game.nuscore %>,<%= game.oppscore %>,<%= game.location %>,<%= game.overtime %>
 <% end %>
 
 <%
