@@ -3,7 +3,7 @@ class AddOvertimeToGames < ActiveRecord::Migration
   class Game < ActiveRecord::Base; end
   
   def self.up
-    add_column :games, :overtime, :boolean, :default => false
+    add_column :games, :overtime, :boolean, :default => false, :null => false
   end
 
   def self.down
