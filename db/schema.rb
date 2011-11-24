@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111001211414) do
+ActiveRecord::Schema.define(:version => 20111124034151) do
 
   create_table "games", :force => true do |t|
     t.integer  "_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20111001211414) do
     t.boolean  "deleted"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "overtime",   :default => false
   end
 
   create_table "locations", :force => true do |t|

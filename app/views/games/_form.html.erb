@@ -40,6 +40,10 @@
     <%= f.select :location, Game::LOCATIONS %>
   </div>
   <div class="field">
+    <%= f.label :overtime %><br />
+    <%= f.check_box :overtime %>
+  </div>
+  <div class="field">
     <%= f.label :deleted %><br />
     <%= f.check_box :deleted %>
   </div>

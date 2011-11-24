@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_filter :authenticate
+ before_filter :authenticate
   
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
@@ -11,7 +11,7 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.xml
   def index
-    @games = Game.all
+    @games = Game.all(:order => "id")
 
     respond_to do |format|
       format.html # index.html.erb
