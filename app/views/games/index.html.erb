@@ -1,38 +1,24 @@
-<h1>Listing games</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Date</th>
-    <th>Season</th>
-    <th>Opponent</th>
-    <th>Nuscore</th>
-    <th>Oppscore</th>
-    <th>Location</th>
-    <th>Overtime</th>
-    <th>Deleted</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @games.each do |game| %>
-  <tr>
-    <td><%= game._id %></td>
-    <td><%= game.date %></td>
-    <td><%= game.season %></td>
-    <td><%= game.opponent %></td>
-    <td><%= game.nuscore %></td>
-    <td><%= game.oppscore %></td>
-    <td><%= game.location %></td>
-    <td><%= game.overtime %></td>
-    <td><%= game.deleted %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div data-role="content">
+		<div class="content-primary">
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+    <% @gamesbyseason.each do |season, games| %>
+      <li data-role="list-divider"><%= season %></li>
+      <div class="ui-grid-d">
+        <% games.each do |game| %>
+            <div class="ui-block-a"><%= game.date %></div>
+            <div class="ui-block-b"><%= link_to game.opponent, edit_game_path(game)%></div>
+            <div class="ui-block-c">
+              <%= game.nuscore %>-<%=  game.oppscore %>
+              <% if game.overtime == true %> OT <% end %>
+            </div>
+            <div class="ui-block-d"><%= game.location %></div>
+            <div class="ui-block-e"><%= game.deleted %></div>
+        <% end %>
+      </div>
+    <% end %>
+    </ul>
+  </div>
+</div>
 
 <br />
 

@@ -11,7 +11,13 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.xml
   def index
-    @games = Game.all(:order => "id")
+    @gamesbyseason = Hash.new
+    Game::SEASONS.each do |season|
+      games = Game.where("season = ?", season)
+      @gamesbyseason[season] = games 
+    end
+    
+    # @games = Game.all(:order => "id")
 
     respond_to do |format|
       format.html # index.html.erb
