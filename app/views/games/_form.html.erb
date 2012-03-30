@@ -11,41 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :_id %><br />
-    <%= f.text_field :_id %>
+  <div class="field" data-role="fieldcontain">
+    <%= f.label :date %>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <%= f.date_select :date %>
+    </fieldset>
   </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :season %><br />
+  <div class="field"  data-role="fieldcontain">
+    <%= f.label :season %>
     <%= f.select :season, Game::SEASONS %>
   </div>
-  <div class="field">
-    <%= f.label :opponent %><br />
+  <div class="field"  data-role="fieldcontain">
+    <%= f.label :opponent %>
     <%= f.text_field :opponent %>
   </div>
-  <div class="field">
-    <%= f.label :nuscore %><br />
+  <div class="field"  data-role="fieldcontain">
+    <%= f.label :nuscore %>
     <%= f.text_field :nuscore %>
   </div>
-  <div class="field">
-    <%= f.label :oppscore %><br />
+  <div class="field"  data-role="fieldcontain">
+    <%= f.label :oppscore %>
     <%= f.text_field :oppscore %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br />
+  <div class="field"  data-role="fieldcontain">
+    <%= f.label :location %>
     <%= f.select :location, Game::LOCATIONS %>
   </div>
-  <div class="field">
-    <%= f.label :overtime %><br />
+  <div class="field"  data-role="fieldcontain">
+  <fieldset data-role="controlgroup" data-type="horizontal">
+    <%= f.label :overtime %>
     <%= f.check_box :overtime %>
-  </div>
-  <div class="field">
-    <%= f.label :deleted %><br />
+    <%= f.label :deleted %>
     <%= f.check_box :deleted %>
+  </fieldset>
   </div>
   <div class="actions">
     <%= f.submit %>

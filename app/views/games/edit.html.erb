@@ -1,6 +1,9 @@
-<h1>Editing game</h1>
+<div data-role="header">
+  <h1>Editing game</h1>
+  <%= link_to 'Show', @game, "class" => "ui-btn-right" %> 
+  <%= link_to 'Back', games_path, "class" => "ui-btn-left" %>
+</div>
 
+<div data-role="content">
 <%= render 'form' %>
-
-<%= link_to 'Show', @game %> |
-<%= link_to 'Back', games_path %>
+</div>

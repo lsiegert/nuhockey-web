@@ -1,23 +1,26 @@
-<div data-role="content">
-		<div class="content-primary">
-		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+<div data-role="collapsible-set" data-theme="a">
     <% @gamesbyseason.each do |season, games| %>
-      <li data-role="list-divider"><%= season %></li>
-      <div class="ui-grid-d">
-        <% games.each do |game| %>
-            <div class="ui-block-a"><%= game.date %></div>
-            <div class="ui-block-b"><%= link_to game.opponent, edit_game_path(game)%></div>
-            <div class="ui-block-c">
-              <%= game.nuscore %>-<%=  game.oppscore %>
-              <% if game.overtime == true %> OT <% end %>
-            </div>
-            <div class="ui-block-d"><%= game.location %></div>
-            <div class="ui-block-e"><%= game.deleted %></div>
-        <% end %>
+      <div data-role="collapsible">
+       <h3><%= season %></h3>
+       <ul data-role="listview" class="ui-grid-a">
+          <% games.each do |game| %>
+            
+            <li>
+            <%= link_to(edit_game_path(game)) do %>
+              <h3> <%= game.date %> </h3>
+                <p> <%= game.nuscore %>-<%=  game.oppscore %>
+                <% if game.overtime == true %> OT <% end %>
+                <% if game.location == "away" %> @
+                  <% elsif game.location == "home" %> vs
+                <% end %>
+              <%= game.opponent %>
+               </p>
+             <% end %>
+            </li>
+          <% end %>
+       </ul>
       </div>
     <% end %>
-    </ul>
-  </div>
 </div>
 
 <br />
