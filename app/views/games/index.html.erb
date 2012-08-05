@@ -1,8 +1,8 @@
-<div data-role="collapsible-set">
+<div data-role="collapsible-set" data-theme="b">
     <% @gamesbyseason.each do |season, games| %>
       <div data-role="collapsible">
        <h3><%= season %></h3>
-       <ul data-role="listview" class="ui-grid-a">
+       <ul data-role="listview" class="ui-grid-b">
           <% games.each do |game| %>
             
             <li>

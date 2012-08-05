@@ -14,10 +14,11 @@ class GamesController < ApplicationController
     @gamesbyseason = Hash.new
     Game::SEASONS.each do |season|
       games = Game.where("season = ?", season)
+      games.order("id")
       @gamesbyseason[season] = games 
     end
     
-    # @games = Game.all(:order => "id")
+    #@games = Game.all(:order => "id")
 
     respond_to do |format|
       format.html # index.html.erb
