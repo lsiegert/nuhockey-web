@@ -1,0 +1,4 @@
+<%= form_tag "/import", {"data-ajax" => false, :multipart => true} do %>
+  <%= file_field_tag "file" %>
+  <%= submit_tag %>
+<% end %>

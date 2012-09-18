@@ -6,6 +6,10 @@ Nuhockey::Application.routes.draw do
   resources :seasons
   
   match 'gameupdates/:time' => 'updates#since'
+  
+  match 'games-batch' => 'games#batch'
+  
+  match 'import' => 'import#file_upload'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

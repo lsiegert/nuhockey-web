@@ -1,0 +1,58 @@
+298,10-Oct-12,2012-13,Merrimack,,,home,0
+299,13-Oct-12,2012-13,boston college,,,home,0
+300,20-Oct-12,2012-13,boston college,,,away,0
+301,26-Oct-12,2012-13,New Hampshire,,,away,0
+302,27-Oct-12,2012-13,New Hampshire,,,home,0
+303,2-Nov-12,2012-13,Merrimack,,,home,0
+304,3-Nov-12,2012-13,Merrimack,,,away,0
+305,10-Nov-12,2012-13,Alabama-Huntsville,,,home,0
+306,11-Nov-12,2012-13,Alabama-Huntsville,,,home,0
+307,16-Nov-12,2012-13,Providence,,,away,0
+308,18-Nov-12,2012-13,Vermont,,,away,0
+309,23-Nov-12,2012-13,St. Lawrence,,,home,0
+310,30-Nov-12,2012-13,Massachusetts,,,away,0
+311,1-Dec-12,2012-13,Massachusetts,,,home,0
+312,8-Dec-12,2012-13,Umass Lowell,,,away,0
+313,29-Dec-12,2012-13,Harvard,,,away,0
+314,5-Jan-13,2012-13,Bentley,,,home,0
+315,11-Jan-13,2012-13,Maine,,,home,0
+316,18-Jan-13,2012-13,boston university,,,away,0
+317,19-Jan-13,2012-13,boston college,,,home,0
+318,25-Jan-13,2012-13,Umass Lowell,,,home,0
+319,26-Jan-13,2012-13,Umass Lowell,,,away,0
+320,1-Feb-13,2012-13,New Hampshire,,,home,0
+321,4-Feb-13,2012-13,boston bniversity,,,neutral,0
+322,8-Feb-13,2012-13,Massachusetts,,,away,0
+323,11-Feb-13,2012-13,Boston College or Harvard,,,neutral,0
+324,15-Feb-13,2012-13,Vermont,,,home,0
+325,16-Feb-13,2012-13,Vermont,,,home,0
+326,22-Feb-13,2012-13,Providence,,,away,0
+327,23-Feb-13,2012-13,Providence,,,home,0
+328,1-Mar-13,2012-13,Maine,,,away,0
+329,2-Mar-13,2012-13,Maine,,,away,0
+330,8-Mar-13,2012-13,boston university,,,home,0
+331,9-Mar-13,2012-13,boston university,,,away,0
+
+
+def csv_import 
+  @parsed_file=CSV.parse(params[:dump][:file])
+  n=0
+  @parsed_file.each  do |row|
+    g=Game.new
+    g._id=row[0]
+    g.date=row[1]
+    g.season=row[2]
+    g.opponent=row[3]
+    g.nuscore=row[4]
+    g.oppscore=row[5]
+    g.location=row[6]
+    g.deleted=row[7]
+  end
+  
+  if g.save
+     n=n+1
+     GC.start if n%50==0
+  end
+  
+  flash.now[:message]="CSV Import Successful,  #{n} new records added to data base"
+end

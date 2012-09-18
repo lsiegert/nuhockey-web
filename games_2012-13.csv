@@ -1,0 +1,36 @@
+_id,date,season,opponent,nuscore,oppscore,location,deleted
+297,"October 7, 2012",2012-13,St. Francis Xavier,,,home,0
+298,"October 10, 2012",2012-13,Merrimack,,,home,0
+299,"October 13, 2012",2012-13,boston college,,,home,0
+300,"October 20, 2012",2012-13,boston college,,,away,0
+301,"October 26, 2012",2012-13,New Hampshire,,,away,0
+302,"October 27, 2012",2012-13,New Hampshire,,,home,0
+303,"November 2, 2012",2012-13,Merrimack,,,home,0
+304,"November 3, 2012",2012-13,Merrimack,,,away,0
+305,"November 10, 2012",2012-13,Alabama-Huntsville,,,home,0
+306,"November 11, 2012",2012-13,Alabama-Huntsville,,,home,0
+307,"November 16, 2012",2012-13,Providence,,,away,0
+308,"November 18, 2012",2012-13,Vermont,,,away,0
+309,"November 23, 2012",2012-13,St. Lawrence,,,home,0
+310,"November 30, 2012",2012-13,Massachusetts,,,away,0
+311,"December 1, 2012",2012-13,Massachusetts,,,home,0
+312,"December 8, 2012",2012-13,Umass Lowell,,,away,0
+313,"December 29, 2012",2012-13,Harvard,,,away,0
+314,"January 5, 2013",2012-13,Bentley,,,home,0
+315,"January 11, 2013",2012-13,Maine,,,home,0
+316,"January 18, 2013",2012-13,boston university,,,away,0
+317,"January 19, 2013",2012-13,boston college,,,home,0
+318,"January 25, 2013",2012-13,Umass Lowell,,,home,0
+319,"January 26, 2013",2012-13,Umass Lowell,,,away,0
+320,"February 1, 2013",2012-13,New Hampshire,,,home,0
+321,"February 4, 2013",2012-13,boston university,,,neutral,0
+322,"February 8, 2013",2012-13,Massachusetts,,,away,0
+323,"February 11, 2013",2012-13,Boston College or Harvard,,,neutral,0
+324,"February 15, 2013",2012-13,Vermont,,,home,0
+325,"February 16, 2013",2012-13,Vermont,,,home,0
+326,"February 22, 2013",2012-13,Providence,,,away,0
+327,"February 23, 2013",2012-13,Providence,,,home,0
+328,"March 1, 2013",2012-13,Maine,,,away,0
+329,"March 2, 2013",2012-13,Maine,,,away,0
+330,"March 8, 2013",2012-13,boston university,,,home,0
+331,"March 9, 2013",2012-13,boston university,,,away,0

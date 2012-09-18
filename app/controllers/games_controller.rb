@@ -48,6 +48,19 @@ class GamesController < ApplicationController
     end
   end
 
+  # GET /games/batch
+  # POST /games/batch
+  def batch
+    if request.post?
+      @foo = params
+    else
+      @foo = "bye"
+      respond_to do |format|
+        format.html
+      end
+    end
+  end
+
   # GET /games/1/edit
   def edit
     @game = Game.find(params[:id])
