@@ -7,7 +7,7 @@ class ImportController < ApplicationController
       require 'fileutils'
       Rails.logger.info("PARAMS: #{params.inspect}")
       tmp = params[:file].tempfile
-      file = File.join("public", params[:file].original_filename)
+      file = File.join("tmp", params[:file].original_filename)
       FileUtils.cp tmp.path, file
     
       # YOUR PARSING JOB
@@ -24,7 +24,7 @@ class ImportController < ApplicationController
         g.save
       end
     
-      flash.now[:message]="CSV Import Successful,  new records added to data base"
+      flash.now[:message]="CSV Import Successful,  new records added to database"
       # BLORP
     
       FileUtils.rm file
